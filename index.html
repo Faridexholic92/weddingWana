@@ -341,6 +341,38 @@
     .tl-item,.tl-item:nth-child(odd),.tl-item:nth-child(even){width:100%;left:0;text-align:left;padding:0 0 34px 58px}
     .tl-item:nth-child(odd) .tl-dot,.tl-item:nth-child(even) .tl-dot{left:0;right:auto}
   }
+  .event{background:var(--cream)}
+  .majlis-hero{max-width:620px;margin:0 auto 58px;text-align:center;background:linear-gradient(160deg,var(--maroon),var(--maroon-deep));color:var(--ivory);padding:46px 34px;border:1px solid rgba(216,189,134,.3);box-shadow:var(--shadow);position:relative;overflow:hidden}
+  .majlis-hero::before{content:'\f5d2';font-family:'Font Awesome 6 Free';font-weight:900;position:absolute;color:rgba(216,189,134,.08);font-size:9rem;top:-22px;right:-16px;transform:rotate(18deg)}
+  .mh-badge{display:inline-block;font-size:.64rem;letter-spacing:.24em;text-transform:uppercase;color:var(--gold-soft);border:1px solid rgba(216,189,134,.5);padding:7px 18px;border-radius:30px;margin-bottom:18px;position:relative;z-index:2}
+  .mh-date{font-family:var(--display);font-size:2rem;color:#fff;margin-bottom:14px;position:relative;z-index:2}
+  .mh-time,.mh-loc{font-size:.95rem;color:rgba(245,236,224,.9);line-height:1.7;margin:4px 0;position:relative;z-index:2}
+  .mh-time i,.mh-loc i{color:var(--gold-soft);margin-right:7px}
+  .mh-dress{display:inline-block;margin-top:16px;font-size:.64rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,236,224,.75);border-top:1px solid rgba(216,189,134,.3);padding-top:14px;position:relative;z-index:2}
+  .majlis-hero .ev-btns{margin-top:22px;position:relative;z-index:2}
+  .majlis-hero .ev-btn{border-color:rgba(216,189,134,.55);color:var(--gold-soft)}
+  .majlis-hero .ev-btn:hover{background:var(--gold-soft);color:var(--maroon-deep)}
+
+  /* === Motif Songket & Ornamen Emas === */
+  .intro,.couple,.event,.ucapan{background-image:radial-gradient(circle,rgba(179,145,79,.06) 1px,transparent 1.7px),repeating-linear-gradient(45deg,transparent 0 17px,rgba(179,145,79,.022) 17px 18px),repeating-linear-gradient(-45deg,transparent 0 17px,rgba(179,145,79,.022) 17px 18px);background-size:26px 26px,auto,auto}
+  .gallery,.contact{background:var(--maroon-deep);background-image:radial-gradient(circle,rgba(216,189,134,.07) 1px,transparent 1.7px),repeating-linear-gradient(45deg,transparent 0 17px,rgba(216,189,134,.03) 17px 18px),repeating-linear-gradient(-45deg,transparent 0 17px,rgba(216,189,134,.03) 17px 18px);background-size:26px 26px,auto,auto}
+  .gallery .sec-head h2,.contact .sec-head h2{color:var(--ivory)}
+  .gallery .sec-head .idx,.contact .sec-head .idx{color:var(--gold-soft)}
+  .gallery .sec-head .sub,.contact .sec-head .sub{color:rgba(245,236,224,.6)}
+  .gallery .sec-head .dash span,.contact .sec-head .dash span{background:var(--gold-soft)}
+  .gallery .sec-head .dash i,.contact .sec-head .dash i{color:var(--gold-soft)}
+  .contact .c-card{background:rgba(255,255,255,.04);border-color:rgba(216,189,134,.28)}
+  .contact .c-card:hover{background:rgba(255,255,255,.07);box-shadow:0 14px 34px rgba(0,0,0,.3)}
+  .contact .c-card h3{color:var(--gold-bright)}
+  .contact .c-card .c-role{color:rgba(245,236,224,.7)}
+  .contact .c-btn{border-color:var(--gold-soft);color:var(--gold-soft)}
+  .contact .c-btn:hover{background:var(--gold-soft);color:var(--maroon-deep)}
+  .gallery .gal-item{border:1px solid rgba(216,189,134,.18)}
+  .sec-head{position:relative}
+  .sec-head::before{content:'\f5d2';font-family:'Font Awesome 6 Free';font-weight:900;position:absolute;top:-12px;left:50%;transform:translateX(-50%);font-size:5.5rem;color:rgba(179,145,79,.06);z-index:0;pointer-events:none}
+  .gallery .sec-head::before,.contact .sec-head::before{color:rgba(216,189,134,.09)}
+  .countdown .sec-head::before{color:rgba(216,189,134,.07)}
+  .sec-head>*{position:relative;z-index:1}
 
   /* Responsive */
   @media(max-width:900px){
@@ -396,7 +428,6 @@
       <li><a href="#home" class="nav-link">Utama</a></li>
       <li><a href="#couple" class="nav-link">Pasangan</a></li>
       <li><a href="#event" class="nav-link">Majlis</a></li>
-      <li><a href="#aturcara" class="nav-link">Atur Cara</a></li>
       <li><a href="#gallery" class="nav-link">Galeri</a></li>
       <li><a href="#ucapan" class="nav-link">Ucapan</a></li>
       <li><a href="#contact" class="nav-link">Hubungi</a></li>
@@ -488,53 +519,19 @@
 <!-- Event -->
 <section class="section event" id="event">
   <div class="wrap">
-    <div class="sec-head reveal"><div class="idx">II</div><h2>Tarikh &amp; Lokasi</h2><div class="sub">Majlis</div><div class="dash"><span></span><i class="fa-solid fa-leaf"></i><span></span></div></div>
-    <div class="events reveal">
-      <div class="ev-card">
-        <div class="ev-ic"><i class="fa-solid fa-book-open"></i></div>
-        <h3>Khatam Al-Quran</h3>
-        <div class="ev-when">Jumaat, 7 Ogos 2026</div>
-        <p class="ev-line"><i class="fa-regular fa-clock"></i> 1:00 Petang</p>
-        <p class="ev-line"><i class="fa-solid fa-location-dot"></i> Felcra Bukit Kepong, Johor</p>
-        <div class="ev-btns">
-          <a class="ev-btn" href="https://goo.gl/maps/7BWVpcrgHojbJ63n7" target="_blank"><i class="fa-brands fa-google"></i> Maps</a>
-          <a class="ev-btn" href="https://waze.com/ul?q=Felcra+Bukit+Kepong+Labis+Segamat+Johor&navigate=yes" target="_blank"><i class="fa-solid fa-car"></i> Waze</a>
-        </div>
-      </div>
-      <div class="ev-card feature">
-        <div class="ev-badge">Majlis Utama</div>
-        <div class="ev-ic"><i class="fa-solid fa-ring"></i></div>
-        <h3>Walimatul Urus</h3>
-        <div class="ev-when">Sabtu, 8 Ogos 2026</div>
-        <p class="ev-line"><i class="fa-regular fa-clock"></i> 8:00 Pagi – 5:00 Petang</p>
-        <p class="ev-line"><i class="fa-solid fa-location-dot"></i> Felcra Bukit Kepong, Labis, Segamat, Johor</p>
-        <div class="ev-dress">Tema: Soft Pink</div>
-        <div class="ev-btns">
-          <a class="ev-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Walimatul+Urus+Hafiz+%26+Aswana&dates=20260808T000000Z/20260808T090000Z&details=Majlis+Perkahwinan+Hafiz+%26+Aswana&location=No.+87,+Jalan+Bunga+Raya,+Felcra+Bukit+Kepong,+85300,+Labis,+Segamat,+Johor" target="_blank"><i class="fa-regular fa-calendar-plus"></i> Kalendar</a>
-          <a class="ev-btn" href="https://goo.gl/maps/7BWVpcrgHojbJ63n7" target="_blank"><i class="fa-brands fa-google"></i> Maps</a>
-          <a class="ev-btn" href="https://waze.com/ul?q=Felcra+Bukit+Kepong+Labis+Segamat+Johor&navigate=yes" target="_blank"><i class="fa-solid fa-car"></i> Waze</a>
-        </div>
-      </div>
-      <div class="ev-card">
-        <div class="ev-ic"><i class="fa-solid fa-mosque"></i></div>
-        <h3>Akad Nikah</h3>
-        <div class="ev-when">Jumaat, 7 Ogos 2026</div>
-        <p class="ev-line"><i class="fa-regular fa-clock"></i> 8:00 Malam</p>
-        <p class="ev-line"><i class="fa-solid fa-location-dot"></i> Felcra Bukit Kepong, Johor</p>
-        <div class="ev-dress">Tema: Soft Yellow</div>
-        <div class="ev-btns">
-          <a class="ev-btn" href="https://goo.gl/maps/7BWVpcrgHojbJ63n7" target="_blank"><i class="fa-brands fa-google"></i> Maps</a>
-          <a class="ev-btn" href="https://waze.com/ul?q=Felcra+Bukit+Kepong+Labis+Segamat+Johor&navigate=yes" target="_blank"><i class="fa-solid fa-car"></i> Waze</a>
-        </div>
+    <div class="sec-head reveal"><div class="idx">II</div><h2>Atur Cara Majlis</h2><div class="sub">Walimatul Urus &middot; 8 Ogos 2026</div><div class="dash"><span></span><i class="fa-solid fa-leaf"></i><span></span></div></div>
+    <div class="majlis-hero reveal">
+      <div class="mh-badge"><i class="fa-solid fa-ring"></i> Walimatul Urus</div>
+      <div class="mh-date">Sabtu, 8 Ogos 2026</div>
+      <div class="mh-time"><i class="fa-regular fa-clock"></i> 8:00 Pagi – 5:00 Petang</div>
+      <div class="mh-loc"><i class="fa-solid fa-location-dot"></i> No. 87, Jalan Bunga Raya, Felcra Bukit Kepong, 85300, Labis, Segamat, Johor</div>
+      <div class="mh-dress">Tema: Soft Pink</div>
+      <div class="ev-btns">
+        <a class="ev-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Walimatul+Urus+Hafiz+%26+Aswana&dates=20260808T000000Z/20260808T090000Z&details=Majlis+Perkahwinan+Hafiz+%26+Aswana&location=No.+87,+Jalan+Bunga+Raya,+Felcra+Bukit+Kepong,+85300,+Labis,+Segamat,+Johor" target="_blank"><i class="fa-regular fa-calendar-plus"></i> Kalendar</a>
+        <a class="ev-btn" href="https://goo.gl/maps/7BWVpcrgHojbJ63n7" target="_blank"><i class="fa-brands fa-google"></i> Maps</a>
+        <a class="ev-btn" href="https://waze.com/ul?q=Felcra+Bukit+Kepong+Labis+Segamat+Johor&navigate=yes" target="_blank"><i class="fa-solid fa-car"></i> Waze</a>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- Atur Cara -->
-<section class="section aturcara" id="aturcara">
-  <div class="wrap">
-    <div class="sec-head reveal"><div class="idx">III</div><h2>Atur Cara Majlis</h2><div class="sub">Hari Bahagia &middot; 8 Ogos 2026</div><div class="dash"><span></span><i class="fa-solid fa-leaf"></i><span></span></div></div>
     <div class="timeline">
       <div class="tl-item reveal"><div class="tl-dot"><i class="fa-solid fa-utensils"></i></div><div class="tl-card"><div class="tl-time">11:00 Pagi</div><h3 class="tl-title">Jamuan Bermula</h3></div></div>
       <div class="tl-item reveal"><div class="tl-dot"><i class="fa-solid fa-drum"></i></div><div class="tl-card"><div class="tl-time">1:40 Tengah Hari</div><h3 class="tl-title">Ketibaan Pengantin</h3><ul class="tl-sub"><li>Diiringi paluan kompang</li></ul></div></div>
@@ -548,7 +545,7 @@
 <!-- Gallery -->
 <section class="section gallery" id="gallery">
   <div class="wrap">
-    <div class="sec-head reveal"><div class="idx">IV</div><h2>Detik Bahagia</h2><div class="sub">Galeri</div><div class="dash"><span></span><i class="fa-solid fa-leaf"></i><span></span></div></div>
+    <div class="sec-head reveal"><div class="idx">III</div><h2>Detik Bahagia</h2><div class="sub">Galeri</div><div class="dash"><span></span><i class="fa-solid fa-leaf"></i><span></span></div></div>
     <div class="gal-grid reveal">
       <div class="gal-item big"><img src="images/hero.jpg" alt="Hafiz &amp; Wana"/></div>
       <div class="gal-item tall"><img src="images/bride.jpg" alt="Wana"/></div>
@@ -566,7 +563,7 @@
 <!-- Ucapan -->
 <section class="section ucapan" id="ucapan">
   <div class="wrap">
-    <div class="sec-head reveal"><div class="idx">V</div><h2>Ucapan Tetamu</h2><div class="sub">Doa &amp; Harapan</div><div class="dash"><span></span><i class="fa-solid fa-leaf"></i><span></span></div></div>
+    <div class="sec-head reveal"><div class="idx">IV</div><h2>Ucapan Tetamu</h2><div class="sub">Doa &amp; Harapan</div><div class="dash"><span></span><i class="fa-solid fa-leaf"></i><span></span></div></div>
     <div class="uc-form reveal zoom">
       <div class="uc-form-title">Tinggalkan Ucapan Anda</div>
       <div class="form-row">
@@ -598,7 +595,7 @@
 <!-- Contact -->
 <section class="section contact" id="contact">
   <div class="wrap">
-    <div class="sec-head reveal"><div class="idx">VI</div><h2>Hubungi Kami</h2><div class="sub">Pertanyaan</div><div class="dash"><span></span><i class="fa-solid fa-leaf"></i><span></span></div></div>
+    <div class="sec-head reveal"><div class="idx">V</div><h2>Hubungi Kami</h2><div class="sub">Pertanyaan</div><div class="dash"><span></span><i class="fa-solid fa-leaf"></i><span></span></div></div>
     <div class="contact-grid">
       <div class="c-card reveal left"><h3>Amiril</h3><p class="c-role">Bapa Pengantin Lelaki</p><a class="c-btn" href="tel:+60127823871"><i class="fa-solid fa-phone"></i> Hubungi</a></div>
       <div class="c-card reveal zoom"><h3>Norazmi</h3><p class="c-role">Abang Pengantin Lelaki</p><a class="c-btn" href="tel:+60129712218"><i class="fa-solid fa-phone"></i> Hubungi</a></div>
