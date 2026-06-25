@@ -321,6 +321,27 @@
   .reveal.zoom.visible{transform:none}
   @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
 
+  /* Atur Cara / Timeline */
+  .aturcara{background:var(--cream)}
+  .timeline{position:relative;max-width:720px;margin:0 auto;padding:6px 0}
+  .timeline::before{content:'';position:absolute;left:50%;top:6px;bottom:6px;width:2px;background:linear-gradient(var(--gold),rgba(216,189,134,.18));transform:translateX(-50%)}
+  .tl-item{position:relative;width:50%;padding:0 42px 42px;box-sizing:border-box}
+  .tl-item:nth-child(odd){left:0;text-align:right}
+  .tl-item:nth-child(even){left:50%;text-align:left}
+  .tl-dot{position:absolute;top:2px;width:44px;height:44px;border-radius:50%;background:var(--maroon);color:var(--gold-soft);display:flex;align-items:center;justify-content:center;font-size:.95rem;box-shadow:0 0 0 6px var(--cream),0 8px 20px rgba(74,28,36,.28);z-index:2}
+  .tl-item:nth-child(odd) .tl-dot{right:-22px}
+  .tl-item:nth-child(even) .tl-dot{left:-22px}
+  .tl-time{font-family:var(--display);font-size:1.12rem;font-weight:700;color:var(--gold);letter-spacing:.02em}
+  .tl-title{font-family:var(--serif);font-size:1.32rem;color:var(--maroon);margin:3px 0 6px}
+  .tl-sub{list-style:none;padding:0;margin:0}
+  .tl-sub li{font-size:.94rem;color:var(--stone);line-height:1.75}
+  .tl-sub li::before{content:'\2022';color:var(--gold);margin:0 7px}
+  @media(max-width:760px){
+    .timeline::before{left:22px}
+    .tl-item,.tl-item:nth-child(odd),.tl-item:nth-child(even){width:100%;left:0;text-align:left;padding:0 0 34px 58px}
+    .tl-item:nth-child(odd) .tl-dot,.tl-item:nth-child(even) .tl-dot{left:0;right:auto}
+  }
+
   /* Responsive */
   @media(max-width:900px){
     .nav-menu{position:fixed;top:0;right:-100%;height:100vh;width:76%;max-width:320px;background:linear-gradient(160deg,var(--maroon),var(--maroon-deep));flex-direction:column;justify-content:center;align-items:center;gap:30px;transition:right .45s ease;box-shadow:var(--shadow)}
@@ -375,6 +396,7 @@
       <li><a href="#home" class="nav-link">Utama</a></li>
       <li><a href="#couple" class="nav-link">Pasangan</a></li>
       <li><a href="#event" class="nav-link">Majlis</a></li>
+      <li><a href="#aturcara" class="nav-link">Atur Cara</a></li>
       <li><a href="#gallery" class="nav-link">Galeri</a></li>
       <li><a href="#ucapan" class="nav-link">Ucapan</a></li>
       <li><a href="#contact" class="nav-link">Hubungi</a></li>
@@ -411,9 +433,9 @@
     <p class="hostnames">Amiril Bin Yusman &amp; Norizah Binti Sulaiman</p>
     <p class="lead">Dengan rasa penuh kesyukuran &amp; hormatnya, kami menjemput Dato' / Datin, Tuan / Puan, Encik / Cik untuk meraikan majlis perkahwinan anakanda kami</p>
     <div class="couple-formal">
-      <span class="cf-name">Muhammad Hafiz Bin Amiril</span>
-      <span class="cf-with">dengan pasangannya</span>
       <span class="cf-name">Aswana Binti Maduni</span>
+      <span class="cf-with">dengan pasangannya</span>
+      <span class="cf-name">Muhammad Hafiz Bin Amiril</span>
     </div>
     <div class="vsep"></div>
   </div>
@@ -466,7 +488,7 @@
 <!-- Event -->
 <section class="section event" id="event">
   <div class="wrap">
-    <div class="sec-head reveal"><div class="idx">II</div><h2>Atur Cara Majlis</h2><div class="sub">Jemputan</div><div class="dash"><span></span><i class="fa-solid fa-leaf"></i><span></span></div></div>
+    <div class="sec-head reveal"><div class="idx">II</div><h2>Tarikh &amp; Lokasi</h2><div class="sub">Majlis</div><div class="dash"><span></span><i class="fa-solid fa-leaf"></i><span></span></div></div>
     <div class="events reveal">
       <div class="ev-card">
         <div class="ev-ic"><i class="fa-solid fa-book-open"></i></div>
@@ -509,10 +531,24 @@
   </div>
 </section>
 
+<!-- Atur Cara -->
+<section class="section aturcara" id="aturcara">
+  <div class="wrap">
+    <div class="sec-head reveal"><div class="idx">III</div><h2>Atur Cara Majlis</h2><div class="sub">Hari Bahagia &middot; 8 Ogos 2026</div><div class="dash"><span></span><i class="fa-solid fa-leaf"></i><span></span></div></div>
+    <div class="timeline">
+      <div class="tl-item reveal"><div class="tl-dot"><i class="fa-solid fa-utensils"></i></div><div class="tl-card"><div class="tl-time">11:00 Pagi</div><h3 class="tl-title">Jamuan Bermula</h3></div></div>
+      <div class="tl-item reveal"><div class="tl-dot"><i class="fa-solid fa-drum"></i></div><div class="tl-card"><div class="tl-time">1:40 Tengah Hari</div><h3 class="tl-title">Ketibaan Pengantin</h3><ul class="tl-sub"><li>Diiringi paluan kompang</li></ul></div></div>
+      <div class="tl-item reveal"><div class="tl-dot"><i class="fa-solid fa-crown"></i></div><div class="tl-card"><div class="tl-time">1:50 Petang</div><h3 class="tl-title">Bersanding</h3><ul class="tl-sub"><li>Menepung tawar</li><li>Sesi bergambar</li></ul></div></div>
+      <div class="tl-item reveal"><div class="tl-dot"><i class="fa-solid fa-bowl-food"></i></div><div class="tl-card"><div class="tl-time">2:30 Tengah Hari</div><h3 class="tl-title">Makan Berdamai</h3><ul class="tl-sub"><li>Bacaan doa</li><li>Sesi bersalaman dengan tetamu</li></ul></div></div>
+      <div class="tl-item reveal"><div class="tl-dot"><i class="fa-solid fa-flag-checkered"></i></div><div class="tl-card"><div class="tl-time">5:00 Petang</div><h3 class="tl-title">Jamuan Tamat</h3></div></div>
+    </div>
+  </div>
+</section>
+
 <!-- Gallery -->
 <section class="section gallery" id="gallery">
   <div class="wrap">
-    <div class="sec-head reveal"><div class="idx">III</div><h2>Detik Bahagia</h2><div class="sub">Galeri</div><div class="dash"><span></span><i class="fa-solid fa-leaf"></i><span></span></div></div>
+    <div class="sec-head reveal"><div class="idx">IV</div><h2>Detik Bahagia</h2><div class="sub">Galeri</div><div class="dash"><span></span><i class="fa-solid fa-leaf"></i><span></span></div></div>
     <div class="gal-grid reveal">
       <div class="gal-item big"><img src="images/hero.jpg" alt="Hafiz &amp; Wana"/></div>
       <div class="gal-item tall"><img src="images/bride.jpg" alt="Wana"/></div>
@@ -530,7 +566,7 @@
 <!-- Ucapan -->
 <section class="section ucapan" id="ucapan">
   <div class="wrap">
-    <div class="sec-head reveal"><div class="idx">IV</div><h2>Ucapan Tetamu</h2><div class="sub">Doa &amp; Harapan</div><div class="dash"><span></span><i class="fa-solid fa-leaf"></i><span></span></div></div>
+    <div class="sec-head reveal"><div class="idx">V</div><h2>Ucapan Tetamu</h2><div class="sub">Doa &amp; Harapan</div><div class="dash"><span></span><i class="fa-solid fa-leaf"></i><span></span></div></div>
     <div class="uc-form reveal zoom">
       <div class="uc-form-title">Tinggalkan Ucapan Anda</div>
       <div class="form-row">
@@ -562,11 +598,11 @@
 <!-- Contact -->
 <section class="section contact" id="contact">
   <div class="wrap">
-    <div class="sec-head reveal"><div class="idx">V</div><h2>Hubungi Kami</h2><div class="sub">Pertanyaan</div><div class="dash"><span></span><i class="fa-solid fa-leaf"></i><span></span></div></div>
+    <div class="sec-head reveal"><div class="idx">VI</div><h2>Hubungi Kami</h2><div class="sub">Pertanyaan</div><div class="dash"><span></span><i class="fa-solid fa-leaf"></i><span></span></div></div>
     <div class="contact-grid">
       <div class="c-card reveal left"><h3>Amiril</h3><p class="c-role">Bapa Pengantin Lelaki</p><a class="c-btn" href="tel:+60127823871"><i class="fa-solid fa-phone"></i> Hubungi</a></div>
-      <div class="c-card reveal zoom"><h3>Norazmi</h3><p class="c-role">Wakil Keluarga</p><a class="c-btn" href="tel:+60129712218"><i class="fa-solid fa-phone"></i> Hubungi</a></div>
-      <div class="c-card reveal right"><h3>Anidah</h3><p class="c-role">Wakil Keluarga</p><a class="c-btn" href="tel:+601160520453"><i class="fa-solid fa-phone"></i> Hubungi</a></div>
+      <div class="c-card reveal zoom"><h3>Norazmi</h3><p class="c-role">Abang Pengantin Lelaki</p><a class="c-btn" href="tel:+60129712218"><i class="fa-solid fa-phone"></i> Hubungi</a></div>
+      <div class="c-card reveal right"><h3>Anidah</h3><p class="c-role">Kakak Pengantin Lelaki</p><a class="c-btn" href="tel:+601160520453"><i class="fa-solid fa-phone"></i> Hubungi</a></div>
     </div>
   </div>
 </section>
