@@ -1,4 +1,4 @@
-/* ===== Walimatul Urus · Aswana & B — main.js ===== */
+/* ===== Walimatul Urus · Hafiz & Aswana — main.js ===== */
 // >>> TUKAR TARIKH MAJLIS DI SINI (YYYY, bulan 0=Jan, hari, jam, minit) <<<
 const WEDDING_DATE = new Date(2025, 11, 20, 10, 0, 0); // 20 Disember 2025, 10:00 pagi
 
