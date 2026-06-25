@@ -2,12 +2,16 @@
 <html lang="ms">
 <head>
   <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Jemputan Walimatul Urus Hafiz & Wana — 7 Jun 2026, Laman Kasih, Kg. Gayang, Tuaran, Sabah"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+  <meta name="theme-color" content="#4a1c24"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="mobile-web-app-capable" content="yes"/>
+  <meta name="format-detection" content="telephone=no"/>
+  <meta name="description" content="Jemputan Walimatul Urus Hafiz & Wana — 8 Ogos 2026, Felcra Bukit Kepong, Labis, Segamat, Johor"/>
   <meta property="og:type" content="website"/>
   <meta property="og:url" content="https://wedding-wana.vercel.app"/>
   <meta property="og:title" content="Walimatul Urus — Hafiz & Wana 💍"/>
-  <meta property="og:description" content="Dengan penuh kesyukuran, kami menjemput Tuan/Puan ke majlis perkahwinan kami pada 7 Jun 2026 di Laman Kasih, Kg. Gayang, Tuaran, Sabah."/>
+  <meta property="og:description" content="Dengan penuh kesyukuran, kami menjemput Tuan/Puan ke majlis perkahwinan kami pada 8 Ogos 2026 di Felcra Bukit Kepong, Labis, Segamat, Johor."/>
   <meta property="og:image" content="https://wedding-wana.vercel.app/images/wana.jpg"/>
   <title>Walimatul Urus — Hafiz & Wana</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
@@ -24,8 +28,11 @@
     --display:'Cormorant Garamond',serif;--serif:'Playfair Display',serif;--script:'Great Vibes',cursive;--sans:'Jost',sans-serif;--arabic:'Noto Naskh Arabic',serif;
   }
   *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth}
-  body{font-family:var(--sans);font-weight:300;color:var(--ink);background:var(--cream);overflow-x:hidden;line-height:1.75}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+  body{font-family:var(--sans);font-weight:300;color:var(--ink);background:var(--cream);overflow-x:hidden;width:100%;line-height:1.75;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;-webkit-tap-highlight-color:transparent;overscroll-behavior-y:none}
+  a,button,select,.nav-link,.emoji-btn,.ev-btn,.c-btn,.hero-cta,.music-btn,.back-top,.gal-item,.uc-submit{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+  img{-webkit-user-drag:none;user-select:none}
+  @media (hover:none){.portrait:hover::before{inset:0}.gal-item:hover img,.portrait:hover img{transform:none}}
   h1,h2,h3,h4{font-family:var(--serif);font-weight:500;line-height:1.16}
   a{text-decoration:none;color:inherit}
   img{max-width:100%;display:block}
@@ -56,7 +63,7 @@
   @keyframes twinkle{0%,100%{opacity:0;transform:scale(.4)}50%{opacity:.9;transform:scale(1.2)}}
 
   /* Music */
-  .music-btn{position:fixed;bottom:88px;right:22px;z-index:800;width:52px;height:52px;border-radius:50%;border:1px solid var(--gold);cursor:pointer;color:var(--maroon);background:rgba(251,246,238,.92);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;font-size:1rem;transition:transform .3s,background .3s,color .3s;box-shadow:var(--shadow-sm)}
+  .music-btn{position:fixed;bottom:calc(88px + env(safe-area-inset-bottom));right:calc(22px + env(safe-area-inset-right));z-index:800;width:52px;height:52px;border-radius:50%;border:1px solid var(--gold);cursor:pointer;color:var(--maroon);background:rgba(251,246,238,.92);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:center;font-size:1rem;transition:transform .3s,background .3s,color .3s;box-shadow:var(--shadow-sm)}
   .music-btn:hover{transform:scale(1.1) rotate(8deg)}
   .music-btn.playing{background:var(--maroon);color:var(--gold-bright);animation:musicPulse 2s ease-in-out infinite}
   @keyframes musicPulse{0%,100%{box-shadow:0 0 0 0 rgba(179,145,79,.5)}50%{box-shadow:0 0 0 12px rgba(179,145,79,0)}}
@@ -86,7 +93,7 @@
   .navbar.scrolled .nav-toggle span{background:var(--maroon)}
 
   /* Hero */
-  .hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:130px 22px 96px;position:relative;overflow:hidden}
+  .hero{min-height:100vh;min-height:100svh;display:flex;align-items:center;justify-content:center;text-align:center;padding:130px 22px 96px;position:relative;overflow:hidden}
   .hero-bg{position:absolute;inset:0;background:url('images/hero.jpg') center 18%/cover;z-index:-3;animation:kenburns 22s ease-in-out infinite alternate}
   @keyframes kenburns{0%{transform:scale(1.05)}100%{transform:scale(1.18) translateY(-12px)}}
   .hero-veil{position:absolute;inset:0;z-index:-2;background:linear-gradient(rgba(40,17,22,.5),rgba(40,17,22,.4) 40%,rgba(35,15,20,.82))}
@@ -244,7 +251,7 @@
   .form-group{margin-bottom:18px}
   .form-group label{display:block;font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:var(--stone);margin-bottom:8px}
   .form-group label i{color:var(--gold);margin-right:5px}
-  .form-group input,.form-group select,.form-group textarea{width:100%;font-family:var(--sans);font-weight:300;font-size:.95rem;padding:13px 15px;border:1px solid var(--line);background:var(--cream);color:var(--ink);transition:border .3s,box-shadow .3s;resize:vertical}
+  .form-group input,.form-group select,.form-group textarea{width:100%;font-family:var(--sans);font-weight:300;font-size:16px;padding:13px 15px;border:1px solid var(--line);background:var(--cream);color:var(--ink);transition:border .3s,box-shadow .3s;resize:vertical}
   .form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(179,145,79,.13);background:#fff}
   .form-group textarea{min-height:112px}
   .emoji-row{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-bottom:20px}
@@ -278,7 +285,7 @@
 
   /* Contact */
   .contact{background:var(--ivory)}
-  .contact-grid{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:34px;max-width:740px;margin:0 auto}
+  .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);align-items:stretch;gap:24px;max-width:900px;margin:0 auto}
   .c-card{text-align:center;padding:40px 28px;border:1px solid var(--line);background:#fff;transition:transform .4s,box-shadow .4s}
   .c-card:hover{transform:translateY(-6px);box-shadow:var(--shadow-sm)}
   .c-card h3{font-family:var(--display);font-size:2rem;color:var(--maroon)}
@@ -298,7 +305,7 @@
   .footer-rule i{animation:beat 2.6s ease-in-out infinite}
   .footer-cr{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(245,236,224,.5);margin-top:16px}
 
-  .back-top{position:fixed;bottom:22px;right:22px;width:48px;height:48px;border:1px solid var(--gold);border-radius:50%;background:var(--maroon);color:var(--gold-soft);cursor:pointer;opacity:0;visibility:hidden;transform:translateY(12px);transition:.35s;z-index:800}
+  .back-top{position:fixed;bottom:calc(22px + env(safe-area-inset-bottom));right:calc(22px + env(safe-area-inset-right));width:48px;height:48px;border:1px solid var(--gold);border-radius:50%;background:var(--maroon);color:var(--gold-soft);cursor:pointer;opacity:0;visibility:hidden;transform:translateY(12px);transition:.35s;z-index:800}
   .back-top.visible{opacity:1;visibility:visible;transform:none}
   .back-top:hover{background:var(--gold);color:#fff}
 
@@ -356,7 +363,7 @@
 
 <!-- Music -->
 <button class="music-btn" id="music-toggle" aria-label="Muzik"><i class="fa-solid fa-music"></i><div class="music-waves"><span></span><span></span><span></span><span></span></div></button>
-<audio id="bg-music" loop preload="none"><source src="music/Lagu.mp3" type="audio/mpeg"/></audio>
+<audio id="bg-music" preload="auto" playsinline></audio>
 
 <!-- Navbar -->
 <nav class="navbar" id="navbar">
@@ -388,8 +395,8 @@
       <span class="nm">Wana</span>
     </div>
     <div class="hero-rule"><span class="l"></span><i class="fa-solid fa-diamond"></i><span class="l"></span></div>
-    <p class="hero-date">7 Jun 2026</p>
-    <p class="hero-loc">Laman Kasih · Kg. Gayang, Tuaran, Sabah</p>
+    <p class="hero-date">8 Ogos 2026</p>
+    <p class="hero-loc">Felcra Bukit Kepong · Labis, Segamat, Johor</p>
     <a href="#event" class="hero-cta"><span>Atur Cara Majlis</span> <i class="fa-solid fa-arrow-down"></i></a>
   </div>
   <div class="scroll-cue"><div class="ms"></div><p>Scroll</p></div>
@@ -399,9 +406,9 @@
 <section class="section intro">
   <div class="wrap reveal">
     <p class="salam">Assalamualaikum w.b.t &amp; Salam Sejahtera</p>
-    <p class="hostnames">Maduni bin Majidin &amp; Haliah binti Idris</p>
-    <p class="lead">Dengan rasa penuh kesyukuran &amp; hormatnya, kami menjemput Dato' / Datin, Tuan / Puan, Encik / Cik untuk meraikan majlis perkahwinan anak bongsu kami</p>
-    <p class="couple-formal">Muhammad Hafiz Bin Amiril<br/>&amp; Aswana Binti Maduni</p>
+    <p class="hostnames">Amiril Bin Yusman &amp; Norizah Binti Sulaiman</p>
+    <p class="lead">Dengan rasa penuh kesyukuran &amp; hormatnya, kami menjemput Dato' / Datin, Tuan / Puan, Encik / Cik untuk meraikan majlis perkahwinan anakanda kami</p>
+    <p class="couple-formal">Muhammad Hafiz Amiril<br/>&amp; Aswana Maduni</p>
     <div class="vsep"></div>
   </div>
 </section>
@@ -458,39 +465,38 @@
       <div class="ev-card">
         <div class="ev-ic"><i class="fa-solid fa-book-open"></i></div>
         <h3>Khatam Al-Quran</h3>
-        <div class="ev-when">Sabtu, 6 Jun 2026</div>
+        <div class="ev-when">Jumaat, 7 Ogos 2026</div>
         <p class="ev-line"><i class="fa-regular fa-clock"></i> 1:00 Petang</p>
-        <p class="ev-line"><i class="fa-solid fa-location-dot"></i> Laman Kasih</p>
+        <p class="ev-line"><i class="fa-solid fa-location-dot"></i> Felcra Bukit Kepong, Johor</p>
         <div class="ev-btns">
-          <a class="ev-btn" href="https://maps.google.com/?q=Laman+Kasih,+Kampung+Gayang,+Tuaran,+Sabah" target="_blank"><i class="fa-brands fa-google"></i> Maps</a>
-          <a class="ev-btn" href="https://waze.com/ul?q=Laman+Kasih+Kampung+Gayang+Tuaran&navigate=yes" target="_blank"><i class="fa-solid fa-car"></i> Waze</a>
+          <a class="ev-btn" href="https://goo.gl/maps/7BWVpcrgHojbJ63n7" target="_blank"><i class="fa-brands fa-google"></i> Maps</a>
+          <a class="ev-btn" href="https://waze.com/ul?q=Felcra+Bukit+Kepong+Labis+Segamat+Johor&navigate=yes" target="_blank"><i class="fa-solid fa-car"></i> Waze</a>
         </div>
       </div>
       <div class="ev-card feature">
         <div class="ev-badge">Majlis Utama</div>
         <div class="ev-ic"><i class="fa-solid fa-ring"></i></div>
         <h3>Walimatul Urus</h3>
-        <div class="ev-when">Ahad, 7 Jun 2026 · 21 Zulhijah 1447H</div>
-        <p class="ev-line"><i class="fa-regular fa-clock"></i> Jamuan: 8:00 Pagi – 5:00 Petang</p>
-        <p class="ev-line"><i class="fa-solid fa-crown"></i> Sanding: 1:00 Petang</p>
-        <p class="ev-line"><i class="fa-solid fa-location-dot"></i> Laman Kasih, Kg. Gayang, Tuaran</p>
+        <div class="ev-when">Sabtu, 8 Ogos 2026</div>
+        <p class="ev-line"><i class="fa-regular fa-clock"></i> 8:00 Pagi – 5:00 Petang</p>
+        <p class="ev-line"><i class="fa-solid fa-location-dot"></i> Felcra Bukit Kepong, Labis, Segamat, Johor</p>
         <div class="ev-dress">Tema: Soft Pink</div>
         <div class="ev-btns">
-          <a class="ev-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Walimatul+Urus+Aswana+%26+Hafiz&dates=20260607T000000Z/20260607T090000Z&details=Majlis+Perkahwinan+Aswana+%26+Hafiz&location=Laman+Kasih,+Kg.+Gayang,+Tuaran,+Sabah" target="_blank"><i class="fa-regular fa-calendar-plus"></i> Kalendar</a>
-          <a class="ev-btn" href="https://maps.google.com/?q=Laman+Kasih,+Kampung+Gayang,+Tuaran,+Sabah" target="_blank"><i class="fa-brands fa-google"></i> Maps</a>
-          <a class="ev-btn" href="https://waze.com/ul?q=Laman+Kasih+Kampung+Gayang+Tuaran&navigate=yes" target="_blank"><i class="fa-solid fa-car"></i> Waze</a>
+          <a class="ev-btn" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Walimatul+Urus+Hafiz+%26+Aswana&dates=20260808T000000Z/20260808T090000Z&details=Majlis+Perkahwinan+Hafiz+%26+Aswana&location=No.+87,+Jalan+Bunga+Raya,+Felcra+Bukit+Kepong,+85300,+Labis,+Segamat,+Johor" target="_blank"><i class="fa-regular fa-calendar-plus"></i> Kalendar</a>
+          <a class="ev-btn" href="https://goo.gl/maps/7BWVpcrgHojbJ63n7" target="_blank"><i class="fa-brands fa-google"></i> Maps</a>
+          <a class="ev-btn" href="https://waze.com/ul?q=Felcra+Bukit+Kepong+Labis+Segamat+Johor&navigate=yes" target="_blank"><i class="fa-solid fa-car"></i> Waze</a>
         </div>
       </div>
       <div class="ev-card">
         <div class="ev-ic"><i class="fa-solid fa-mosque"></i></div>
         <h3>Akad Nikah</h3>
-        <div class="ev-when">Sabtu, 6 Jun 2026</div>
+        <div class="ev-when">Jumaat, 7 Ogos 2026</div>
         <p class="ev-line"><i class="fa-regular fa-clock"></i> 8:00 Malam</p>
-        <p class="ev-line"><i class="fa-solid fa-location-dot"></i> Laman Kasih</p>
+        <p class="ev-line"><i class="fa-solid fa-location-dot"></i> Felcra Bukit Kepong, Johor</p>
         <div class="ev-dress">Tema: Soft Yellow</div>
         <div class="ev-btns">
-          <a class="ev-btn" href="https://maps.google.com/?q=Laman+Kasih,+Kampung+Gayang,+Tuaran,+Sabah" target="_blank"><i class="fa-brands fa-google"></i> Maps</a>
-          <a class="ev-btn" href="https://waze.com/ul?q=Laman+Kasih+Kampung+Gayang+Tuaran&navigate=yes" target="_blank"><i class="fa-solid fa-car"></i> Waze</a>
+          <a class="ev-btn" href="https://goo.gl/maps/7BWVpcrgHojbJ63n7" target="_blank"><i class="fa-brands fa-google"></i> Maps</a>
+          <a class="ev-btn" href="https://waze.com/ul?q=Felcra+Bukit+Kepong+Labis+Segamat+Johor&navigate=yes" target="_blank"><i class="fa-solid fa-car"></i> Waze</a>
         </div>
       </div>
     </div>
@@ -552,9 +558,9 @@
   <div class="wrap">
     <div class="sec-head reveal"><div class="idx">V</div><h2>Hubungi Kami</h2><div class="sub">Pertanyaan</div><div class="dash"><span></span><i class="fa-solid fa-leaf"></i><span></span></div></div>
     <div class="contact-grid">
-      <div class="c-card reveal left"><h3>Maduni</h3><p class="c-role">Ayah Pengantin Perempuan</p><a class="c-btn" href="tel:+600198327654"><i class="fa-solid fa-phone"></i> Hubungi</a></div>
-      <div class="contact-amp reveal zoom">&amp;</div>
-      <div class="c-card reveal right"><h3>Asnedah</h3><p class="c-role">Kakak Pengantin Perempuan</p><a class="c-btn" href="tel:+6001137903963"><i class="fa-solid fa-phone"></i> Hubungi</a></div>
+      <div class="c-card reveal left"><h3>Amiril</h3><p class="c-role">Bapa Pengantin Lelaki</p><a class="c-btn" href="tel:+60127823871"><i class="fa-solid fa-phone"></i> Hubungi</a></div>
+      <div class="c-card reveal zoom"><h3>Norazmi</h3><p class="c-role">Wakil Keluarga</p><a class="c-btn" href="tel:+60129712218"><i class="fa-solid fa-phone"></i> Hubungi</a></div>
+      <div class="c-card reveal right"><h3>Anidah</h3><p class="c-role">Wakil Keluarga</p><a class="c-btn" href="tel:+601160520453"><i class="fa-solid fa-phone"></i> Hubungi</a></div>
     </div>
   </div>
 </section>
@@ -565,7 +571,7 @@
   <div class="footer-names reveal">Hafiz <span class="amp">&amp;</span> Wana</div>
   <p class="footer-thanks reveal">Kehadiran &amp; doa restu semua amat kami hargai.<br/>Moga bersatu dalam kasih Ilahi hingga ke Jannah.</p>
   <div class="footer-rule reveal"><span class="l"></span><i class="fa-solid fa-heart"></i><span class="l"></span></div>
-  <p class="footer-cr">© 2026 Hafiz &amp; Wana · Laman Kasih, Kg. Gayang, Tuaran, Sabah</p>
+  <p class="footer-cr">© 2026 Hafiz &amp; Wana · Felcra Bukit Kepong, Labis, Segamat, Johor</p>
 </footer>
 
 <button class="back-top" id="back-to-top" aria-label="Atas"><i class="fa-solid fa-chevron-up"></i></button>
@@ -598,12 +604,29 @@ document.querySelectorAll('.reveal').forEach(el=>revObs.observe(el));
 
 // COUNTDOWN
 let prev={};
-function updateCountdown(){const target=new Date('2026-06-07T08:00:00+08:00').getTime();const diff=target-Date.now();const o={};if(diff<=0){o.days=o.hours=o.minutes=o.seconds='00';}else{o.days=String(Math.floor(diff/864e5)).padStart(2,'0');o.hours=String(Math.floor(diff%864e5/36e5)).padStart(2,'0');o.minutes=String(Math.floor(diff%36e5/6e4)).padStart(2,'0');o.seconds=String(Math.floor(diff%6e4/1e3)).padStart(2,'0');}for(const k in o){const el=document.getElementById(k);if(el&&prev[k]!==o[k]){el.textContent=o[k];el.classList.remove('tick');void el.offsetWidth;el.classList.add('tick');}}prev=o;}
+function updateCountdown(){const target=new Date('2026-08-08T08:00:00+08:00').getTime();const diff=target-Date.now();const o={};if(diff<=0){o.days=o.hours=o.minutes=o.seconds='00';}else{o.days=String(Math.floor(diff/864e5)).padStart(2,'0');o.hours=String(Math.floor(diff%864e5/36e5)).padStart(2,'0');o.minutes=String(Math.floor(diff%36e5/6e4)).padStart(2,'0');o.seconds=String(Math.floor(diff%6e4/1e3)).padStart(2,'0');}for(const k in o){const el=document.getElementById(k);if(el&&prev[k]!==o[k]){el.textContent=o[k];el.classList.remove('tick');void el.offsetWidth;el.classList.add('tick');}}prev=o;}
 updateCountdown();setInterval(updateCountdown,1000);
 
-// MUSIC
-const musicBtn=document.getElementById('music-toggle'),bgMusic=document.getElementById('bg-music');let musicPlaying=false;
-musicBtn.addEventListener('click',()=>{if(musicPlaying){bgMusic.pause();musicBtn.classList.remove('playing');}else{bgMusic.play().catch(()=>{});musicBtn.classList.add('playing');}musicPlaying=!musicPlaying;});
+// MUSIC — senarai lagu + autoplay (Android / iOS / desktop)
+const PLAYLIST=[
+  'music/akad-payung-teduh.mp3',
+  'music/until-i-found-you.mp3',
+  'music/kisah-ku-inginkan.mp3'
+];
+const musicBtn=document.getElementById('music-toggle'),bgMusic=document.getElementById('bg-music');
+let trackIndex=0,musicStarted=false;
+bgMusic.setAttribute('playsinline','');try{bgMusic.volume=0.85;}catch(e){}
+function loadTrack(i){trackIndex=((i%PLAYLIST.length)+PLAYLIST.length)%PLAYLIST.length;bgMusic.src=PLAYLIST[trackIndex];}
+function playMusic(){const p=bgMusic.play();if(p&&p.then){p.then(()=>{musicBtn.classList.add('playing');musicStarted=true;}).catch(()=>{});}}
+function pauseMusic(){bgMusic.pause();musicBtn.classList.remove('playing');}
+loadTrack(0);
+bgMusic.addEventListener('ended',()=>{if(PLAYLIST.length>1){loadTrack(trackIndex+1);playMusic();}else{bgMusic.currentTime=0;playMusic();}});
+bgMusic.addEventListener('error',()=>{if(PLAYLIST.length>1){loadTrack(trackIndex+1);if(musicStarted)playMusic();}});
+musicBtn.addEventListener('click',()=>{if(bgMusic.paused){playMusic();}else{pauseMusic();}});
+// Autoplay: cuba serta-merta; jika disekat pelayar, mula pada sentuhan/klik/scroll pertama
+function tryAutoplay(){const p=bgMusic.play();if(p&&p.then){p.then(()=>{musicBtn.classList.add('playing');musicStarted=true;}).catch(()=>armFirstGesture());}else{armFirstGesture();}}
+function armFirstGesture(){const evts=['pointerdown','touchstart','click','keydown','scroll'];const cleanup=()=>evts.forEach(ev=>window.removeEventListener(ev,start));function start(e){if(e&&e.target&&e.target.closest&&e.target.closest('#music-toggle'))return;playMusic();cleanup();}evts.forEach(ev=>window.addEventListener(ev,start,{passive:true}));}
+window.addEventListener('load',()=>setTimeout(tryAutoplay,1400));
 
 // LIGHTBOX
 const lightbox=document.getElementById('lightbox'),lbImg=lightbox.querySelector('img');
