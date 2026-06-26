@@ -28,7 +28,7 @@
     --display:'Cormorant Garamond',serif;--serif:'Playfair Display',serif;--script:'Great Vibes',cursive;--sans:'Jost',sans-serif;--arabic:'Noto Naskh Arabic',serif;
   }
   *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%;overflow-x:hidden;width:100%;max-width:100%}
   body{font-family:var(--sans);font-weight:300;color:var(--ink);background:var(--cream);overflow-x:hidden;width:100%;line-height:1.75;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;-webkit-tap-highlight-color:transparent;overscroll-behavior-y:none}
   a,button,select,.nav-link,.emoji-btn,.ev-btn,.c-btn,.hero-cta,.music-btn,.back-top,.gal-item,.uc-submit{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
   img{-webkit-user-drag:none;user-select:none}
@@ -378,8 +378,8 @@
 
   /* Responsive */
   @media(max-width:900px){
-    .nav-menu{position:fixed;top:0;right:-100%;height:100vh;width:76%;max-width:320px;background:linear-gradient(160deg,var(--maroon),var(--maroon-deep));flex-direction:column;justify-content:center;align-items:center;gap:30px;transition:right .45s ease;box-shadow:var(--shadow)}
-    .nav-menu.open{right:0}
+    .nav-menu{position:fixed;top:0;right:0;height:100vh;width:76%;max-width:320px;background:linear-gradient(160deg,var(--maroon),var(--maroon-deep));flex-direction:column;justify-content:center;align-items:center;gap:30px;transform:translateX(105%);transition:transform .45s ease;box-shadow:var(--shadow);will-change:transform}
+    .nav-menu.open{transform:translateX(0)}
     .nav-link,.navbar.scrolled .nav-link{color:var(--ivory)}
     .nav-toggle{display:flex}
     .nav-toggle.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
@@ -466,9 +466,9 @@
     <p class="hostnames">Amiril Bin Yusman &amp; Norizah Binti Sulaiman</p>
     <p class="lead">Dengan rasa penuh kesyukuran &amp; hormatnya, kami menjemput Dato' / Datin, Tuan / Puan, Encik / Cik untuk meraikan majlis perkahwinan anakanda kami</p>
     <div class="couple-formal">
-      <span class="cf-name">Muhammad Hafiz Bin Amiril</span>
-      <span class="cf-with">dengan pasangannya</span>
       <span class="cf-name">Aswana Binti Maduni</span>
+      <span class="cf-with">dengan pasangannya</span>
+      <span class="cf-name">Muhammad Hafiz Bin Amiril</span>
     </div>
     <div class="vsep"></div>
   </div>
@@ -512,7 +512,7 @@
 <!-- Moment band -->
 <section class="moment">
   <div class="m-inner reveal">
-    <div class="ar">وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَنفُسِكُ��ْ أَزْوَاجًا</div>
+    <div class="ar">وَمِنْ آيَاتِهِ أَنْ خَلَقَ لَكُم مِّنْ أَ��فُسِكُ��ْ أَزْوَاجًا</div>
     <p>“Dan antara tanda-tanda kekuasaan-Nya, Dia menciptakan untukmu pasangan hidup dari jenismu sendiri, supaya kamu mendapat ketenangan.”</p>
     <p class="ref">Surah Ar-Rum · 21</p>
   </div>
@@ -549,12 +549,11 @@
   <div class="wrap">
     <div class="sec-head reveal"><div class="idx">III</div><h2>Detik Bahagia</h2><div class="sub">Galeri</div><div class="dash"><span></span><i class="fa-solid fa-leaf"></i><span></span></div></div>
     <div class="gal-grid reveal">
-      <div class="gal-item big"><img src="images/hero.jpg" alt="Hafiz &amp; Wana"/></div>
-      <div class="gal-item tall"><img src="images/bride.jpg" alt="Wana"/></div>
-      <div class="gal-item"><img src="images/WanaXHafiz.png" alt="Hafiz &amp; Wana"/></div>
-      <div class="gal-item"><img src="images/groom.jpg" alt="Hafiz"/></div>
-      <div class="gal-item wide"><img src="images/WanaHafiz.png" alt="Hafiz &amp; Wana"/></div>
-      <div class="gal-item wide"><img src="images/wana.jpg" alt="Wana"/></div>
+      <div class="gal-item big"><img src="images/gal_g5.jpg" loading="lazy" alt="Hafiz &amp; Wana berpegang tangan"/></div>
+      <div class="gal-item tall"><img src="images/gal_g1.jpg" loading="lazy" alt="Majlis akad nikah Hafiz &amp; Wana"/></div>
+      <div class="gal-item tall"><img src="images/gal_g2.jpg" loading="lazy" alt="Hafiz &amp; Wana dengan bunga api"/></div>
+      <div class="gal-item wide"><img src="images/gal_g3.jpg" loading="lazy" alt="Potret pengantin Wana"/></div>
+      <div class="gal-item wide"><img src="images/gal_g4.jpg" loading="lazy" alt="Kad jemputan &amp; cincin"/></div>
     </div>
   </div>
 </section>
