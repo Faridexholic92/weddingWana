@@ -28,7 +28,7 @@
     --display:'Cormorant Garamond',serif;--serif:'Playfair Display',serif;--script:'Great Vibes',cursive;--sans:'Jost',sans-serif;--arabic:'Noto Naskh Arabic',serif;
   }
   *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%;overflow-x:clip}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;text-size-adjust:100%}
   body{font-family:var(--sans);font-weight:300;color:var(--ink);background:var(--cream);overflow-x:hidden;width:100%;line-height:1.75;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;-webkit-tap-highlight-color:transparent;overscroll-behavior-y:none}
   a,button,select,.nav-link,.emoji-btn,.ev-btn,.c-btn,.hero-cta,.music-btn,.back-top,.gal-item,.uc-submit{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
   img{-webkit-user-drag:none;user-select:none}
@@ -378,8 +378,8 @@
 
   /* Responsive */
   @media(max-width:900px){
-    .nav-menu{position:fixed;top:0;right:0;height:100vh;width:76%;max-width:320px;background:linear-gradient(160deg,var(--maroon),var(--maroon-deep));flex-direction:column;justify-content:center;align-items:center;gap:30px;transform:translateX(105%);transition:transform .45s ease;box-shadow:var(--shadow);will-change:transform}
-    .nav-menu.open{transform:translateX(0)}
+    .nav-menu{position:fixed;top:0;right:0;height:100vh;width:76%;max-width:320px;background:linear-gradient(160deg,var(--maroon),var(--maroon-deep));flex-direction:column;justify-content:center;align-items:center;gap:30px;opacity:0;visibility:hidden;pointer-events:none;transform:translateY(-6px);transition:opacity .4s ease,transform .4s ease,visibility .4s;box-shadow:var(--shadow)}
+    .nav-menu.open{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
     .nav-link,.navbar.scrolled .nav-link{color:var(--ivory)}
     .nav-toggle{display:flex}
     .nav-toggle.active span:nth-child(1){transform:translateY(7px) rotate(45deg)}
@@ -607,7 +607,7 @@
 
 <!-- Footer -->
 <footer class="footer">
-  <div class="footer-doa reveal">رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ</div>
+  <div class="footer-doa reveal">رَبَّنَا ه��بْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ</div>
   <div class="footer-names reveal">Hafiz <span class="amp">&amp;</span> Wana</div>
   <p class="footer-thanks reveal">Kehadiran &amp; doa restu semua amat kami hargai.<br/>Moga bersatu dalam kasih Ilahi hingga ke Jannah.</p>
   <div class="footer-rule reveal"><span class="l"></span><i class="fa-solid fa-heart"></i><span class="l"></span></div>
